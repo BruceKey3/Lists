@@ -5,12 +5,12 @@
 
 /*	USAGE
 
-   	linked_list* list;
+   	linked_list list;
 	initialise(&list);
 	int one = 609;
 	int* ptr = &one;
-	addLL(list, ptr);
-	ptr = (int*)getLL(list,0);
+	addLL(&list, ptr);
+	ptr = (int*)getLL(&list,0);
 	printf("%d\n", *ptr);
 
  */
@@ -28,7 +28,7 @@ typedef struct linked_list
 	int size;
 }linked_list;
 
-void initialise(linked_list**);
+void initialise(linked_list*);
 
 void addLL(linked_list*, void*);
 
